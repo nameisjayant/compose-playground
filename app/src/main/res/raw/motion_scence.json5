@@ -1,0 +1,47 @@
+{
+  ConstraintSets: {
+    start: {
+      menu: {
+        width: 38,
+        height: 38,
+        start:['parent','start',16] ,
+        top: ['parent','top',16]
+      },
+      box: {
+        width: 'spread',
+        height: 'spread',
+        start: ['parent', 'start', 16],
+        end: ['parent', 'end', 16],
+        top: ['parent', 'top', 200],
+        bottom: ['parent', 'bottom'],
+      }
+    },
+    end: {
+      menu: {
+        width: 38,
+        height: 38,
+        start:['parent','start',16] ,
+        top: ['parent','top',16]
+      },
+      box: {
+        width: 'spread',
+        height: 'spread',
+        start: ['parent', 'start'],
+        end: ['parent', 'end'],
+        top: ['parent', 'top'],
+        bottom: ['parent', 'bottom'],
+      }
+    }
+  },
+  Transitions: {
+    default: {
+      from : 'start',
+      to : 'end',
+      onSwipe: {
+        anchor: 'box',
+        direction: 'up',
+        side : 'top'
+      }
+    }
+  }
+}

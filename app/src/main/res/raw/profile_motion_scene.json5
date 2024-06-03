@@ -1,0 +1,61 @@
+{
+  ConstraintSets: {
+    start: {
+      arrowBack: {
+        width: 24,
+        height: 24,
+        start: ['parent','start',16],
+        top: ['parent','top',16],
+      },
+      profile: {
+        width: 120,
+        height: 120,
+        start: ['parent','start'],
+        end: ['parent','end'],
+        top: ['parent', 'top', 16],
+      },
+      name: {
+        start: ['parent','start'],
+        end: ['parent','end'],
+        top: ['profile', 'bottom']
+      },
+      items: {
+        start: ['parent', 'start', 16],
+        top: ['name', 'bottom',],
+      }
+    },
+    end: {
+      arrowBack: {
+        width: 24,
+        height: 24,
+        start: ['parent','start',16],
+        top: ['parent','top',16],
+      },
+      profile: {
+        width: 40,
+        height: 40,
+        start: ['arrowBack','end',16],
+        top: ['parent','top',16]
+      },
+      name: {
+        start: ['profile','end',16],
+        top: ['parent','top',16]
+      },
+      items: {
+        start: ['parent', 'start', 16],
+        top: ['name', 'bottom',],
+      }
+    }
+  },
+  Transitions: {
+    default: {
+      from : 'start',
+      to : 'end',
+      onSwipe: {
+        anchor: 'items',
+        direction: 'up',
+        side : 'top'
+      }
+    }
+  }
+}
