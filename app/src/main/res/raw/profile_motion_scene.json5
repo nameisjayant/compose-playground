@@ -20,6 +20,7 @@
         top: ['profile', 'bottom']
       },
       items: {
+        width: 'spread',
         start: ['parent', 'start', 16],
         top: ['name', 'bottom',],
       }
@@ -44,6 +45,7 @@
       items: {
         start: ['parent', 'start', 16],
         top: ['name', 'bottom',],
+        width: 'spread'
       }
     }
   },

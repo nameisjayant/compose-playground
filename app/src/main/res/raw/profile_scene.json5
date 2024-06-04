@@ -1,0 +1,109 @@
+{
+  ConstraintSets: {
+    start: {
+      box: {
+        height: 'spread',
+        width: 'spread',
+        start: [
+          'parent',
+          'start',
+          0
+        ],
+        end: [
+          'parent',
+          'end',
+          0
+        ],
+        top: [
+          'parent',
+          'top',
+          0
+        ],
+        bottom: ['parent', 'bottom', -16],
+      },
+      profile: {
+        start: [
+          'box',
+          'start'
+        ],
+        end: [
+          'box',
+          'end'
+        ],
+        top: [
+          'box',
+          'top'
+        ],
+      },
+      name: {
+        start: [
+          'box',
+          'start'
+        ],
+        end: [
+          'box',
+          'end'
+        ],
+        top: [
+          'profile',
+          'bottom',
+          10
+        ]
+      }
+    },
+    end: {
+      box: {
+        height: 'spread',
+        width: 'spread',
+        start: [
+          'parent',
+          'start',
+          0
+        ],
+        end: [
+          'parent',
+          'end',
+          0
+        ],
+        top: [
+          'parent',
+          'top',
+          0
+        ],
+        bottom: ['parent', 'bottom', -16]
+      },
+      profile: {
+        width: 25,
+        height: 25,
+        start: [
+          'box',
+          'start'
+        ],
+        end: [
+          'name',
+          'start'
+        ],
+        top: [
+          'box',
+          'top'
+        ],
+      },
+      name: {
+        start: [
+          'profile',
+          'end',10
+        ],
+        bottom: [
+          'profile',
+          'bottom'
+        ],
+        top: [
+          'profile',
+          'top',
+        ]
+      }
+    }
+  },
+  Transitions: {
+  }
+}

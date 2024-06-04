@@ -1,0 +1,47 @@
+{
+  ConstraintSets: {
+    start: {
+      box: {
+        start: [
+          'parent',
+          'start',
+          10
+        ],
+        top: [
+          'parent',
+          'top'
+        ],
+        bottom: [
+          'parent',
+          'bottom'
+        ],
+      }
+    },
+    end: {
+      end: [
+        'parent',
+        'end',
+        10
+      ],
+      top: [
+        'parent',
+        'top'
+      ],
+      bottom: [
+        'parent',
+        'bottom'
+      ]
+    }
+  },
+  Transitions: {
+    default: {
+      from: 'start',
+      to: 'end',
+      onSwipe: {
+        anchor: 'box',
+        direction: 'end',
+        side: 'end'
+      }
+    }
+  }
+}
