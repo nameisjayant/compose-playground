@@ -4,7 +4,6 @@ import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.graphics.drawscope.Stroke
@@ -61,17 +60,12 @@ fun PathScreen3(modifier: Modifier = Modifier) {
     Canvas(modifier = modifier.fillMaxSize()) {
         val canvasWidth = size.width
         val canvasHeight = size.height
-        val startPoint = Offset(0f, canvasHeight / 2)
-        val endPoint = Offset(canvasWidth, canvasHeight / 2)
-
         val path = Path().apply {
             moveTo(0f, canvasHeight / 2) // initial position
             cubicTo(
-                startPoint.x + (endPoint.x - startPoint.x) / 2f,
-                startPoint.y,
-                startPoint.x + (endPoint.x - startPoint.x) / 2f,
-                endPoint.y,
-                endPoint.x, endPoint.y
+                canvasWidth / 1.5f, canvasHeight / 2f,    // Control point 1
+                0f, 0f,   // Control point 2
+                canvasWidth, canvasHeight / 2    // End point
             )
         }
 
